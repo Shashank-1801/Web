@@ -1,0 +1,139 @@
+/* The side navigation menu */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 0;
+  top: 35;
+  left: 0;
+  float: left;
+  background-color: #333;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.1s;
+  /* x second transition effect */
+}
+
+#results {
+  transition: 0.1s;
+}
+
+.sidenav a {
+  padding: 10px 10px 0px 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.top-text {
+  text-decoration: none;
+  color: black;
+}
+
+.top-text:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-btn,
+.nav-btn:hover {
+  border-width: 0px;
+}
+
+.logo-img {
+  height: 30px;
+}
+
+.logo-text {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#results {
+  background-color: #EEE;
+}
+
+.icon {
+  padding: 5px;
+}
+
+.white {
+  background: white;
+}
+
+.greyish {
+  background-color: #EEE;
+  width: 100%;
+  vertical-align: central;
+  padding: 5px;
+}
+
+.round-box {
+  box-shadow: 3px 3px #80808033;
+  border-style: solid;
+  border-color: #80808066;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.header {
+  font-size: 35px;
+}
+
+hr {
+  background-color: #d9d9d9;
+  /*greyish*/
+  border: none;
+  height: 1px;
+  margin: 10px;
+}
+
+span div img {
+  height: 30px;
+}
+
+.leg_img {
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+Object {
+  height: 500px;
+  width: 100%;
+}
+
+.new_block {
+    padding: 15px;
+}
+
+td img {
+    height: 40px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+}
