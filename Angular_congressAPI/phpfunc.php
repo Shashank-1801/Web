@@ -16,7 +16,7 @@ error_reporting(0);
 	$bio_id = $_GET['bio_id'];
 	$bill_id = $_GET['bill_id'];
 
-	$base_url = "http://congress.api.sunlightfoundation.com/";
+	$base_url = "http://104.198.0.197:8080/";
 	$api_key="&apikey=7856a616226d46818903c54d0f3de707";
 
 	// congress.api.sunlightfoundation.com/legislators?query=boxer&apikey=7856a616226d46818903c54d0f3de707
@@ -47,11 +47,11 @@ error_reporting(0);
 		$json = json_encode(getData($url));
 		echo $json;
 	}elseif($dbtype == 'bills-active') {
-		$url = $base_url . "bills?history.active=true&order=last_action_at&per_page=50" . $api_key;
+		$url = $base_url . "bills?history.active=true&per_page=50" . $api_key;
 		$json = json_encode(getData($url));
 		echo $json;
 	}elseif($dbtype == 'bills-new') {
-		$url = $base_url . "bills?history.active=false&order=last_action_at&per_page=50" . $api_key;
+		$url = $base_url . "bills?history.active=false&per_page=50" . $api_key;
 		$json = json_encode(getData($url));
 		echo $json;
 	}elseif($dbtype == 'comm_house'){
@@ -63,7 +63,7 @@ error_reporting(0);
 		$json = json_encode(getData($url));
 		echo $json;
 	}elseif($dbtype == 'comm_joint'){
-		$url = $base_url . "committees?per_page=all" . $api_key;
+		$url = $base_url . "committees?chamber=joint&per_page=all" . $api_key;
 		$json = json_encode(getData($url));
 		echo $json;
 	}elseif($dbtype == 'legislators-details' && $bio_id!=""){
